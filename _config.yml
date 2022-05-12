@@ -29,7 +29,7 @@ show_excerpts: true
 excerpt_separator: <!--more-->
 read_time: true
 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/dsn3" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 header_pages:
