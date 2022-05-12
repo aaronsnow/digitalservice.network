@@ -1,0 +1,69 @@
+<ul class="list-dir-contents">
+{% assign folder = page.url | remove_first: "/" %}
+{% assign folder_depth = page.url | split: "/" | size %}
+
+<!-- DEBUG: folder = {{ folder }} -->
+<!-- DEBUG: folder_depth = {{ folder_depth }} -->
+
+{% for child in site.pages reversed %}
+<!-- DEBUG: child.path = {{ child.path }} -->
+    {% if child.path contains folder or child.path == folder %}
+        {% assign child_depth = child.path | split: "/" | size %}
+        {% unless child.path contains "index.md" %}
+            {% if child_depth == folder_depth %}
+                {% assign child_title_size = child.title | size %}
+                {% if child_title_size > 0 %}
+                    {% assign display_title = child.title %}
+<!--
+ debug: child.title = |{{ child.title }}|
+ debug: display_title = |{{ display_title }}|
+-->
+                {% else %}
+                    {% assign pageparent = page.path | remove: "index.md" %}
+                    {% assign slugname = child.path | remove: pageparent %}
+                    {% assign display_title = slugname | remove: ".md" | replace: "-", " " %}
+                    {% if display_title == "" %}
+                        {% assign display_title = "(page title unknown)" %}
+                    {% endif %}
+<!-- debug: page path = {{ page.path }}, child path = {{ child.path }}, display_title alt = |{{ display_title }}| -->
+                {% endif %}
+                {% assign url_size = child.url | size %}
+                {% if url_size > 0 %}
+                    {% assign link_url = child.url %}
+                {% else %}
+                    {% assign link_url = "./" | append: slugname %}
+                {% endif %}
+<li><a href="{{ link_url }}">{{ display_title }}</a></li>
+            {% else %}
+<!-- Subdir: child.path = {{ child.path }} -->
+            {% endif %}
+        {% else %}
+<!-- DEBUG: child_depth = {{ child_depth }} -->         
+            {% assign subfolder_depth = folder_depth | plus: 1 %}
+            {% if child_depth == subfolder_depth %}
+                {% if page.show_subfolders == true %}
+<li><a href="{{ child.url }}">{% if child.title == "" %}{{ child.name }}{% else %}{{ child.title }}{% endif %}</a></li>
+                {% endif %}
+            {% endif %}
+        {% endunless %}
+    {% endif %}
+{% endfor %}
+
+{% for static_child in site.static_files %}
+    {% if static_child.path contains folder or static_child.path == folder %}
+        {% unless static_child.extname == '.md' %}
+            {% assign child_depth = static_child.path | remove_first: "/" | split: "/" | size %}
+<!--
+ DEBUG: child_depth = {{ child_depth }}, folder_depth = {{ folder_depth }}
+ DEBUG: current page path = {{ page.path }}, URL = {{ page.url }}
+ DEBUG: static file path = {{ static_child.path }}, filename = {{ static_child.name }}
+-->
+            {% if child_depth == folder_depth %}
+<li><a href="{{ static_child.path }}">{{ static_child.name }}</a>&nbsp;&nbsp;<span class="badge badge-secondary">static file</span></li>
+            {% else %}
+<!-- Subdir: static_child.path = {{ static_child.path }} -->
+            {% endif %}
+        {% endunless %}
+    {% endif %}
+{% endfor %}
+</ul>
