@@ -1,5 +1,5 @@
 .DS_Store
-.jekyll_cache/
+.jekyll-cache/
 vendor
 _site
 Gemfile.lock
