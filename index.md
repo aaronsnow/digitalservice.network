@@ -7,8 +7,7 @@ show_excerpts: false
 ---
 
 ## Welcome
-Welcome to DSN's "soft launch" website. A quick tour of what's here so far:
-- [More about the DSN]({{ site.baseurl }}/about)
+Welcome to the DSN.
 - [Sign up to join our mailing list](https://airtable.com/shrltywvcMrfvKbpN)
 - We're building a [Library]({{ site.baseurl }}/library), starting with a collection of [job descriptions]({{ site.baseurl }}/library/job-descriptions) for digital roles in government from several different governments.
 

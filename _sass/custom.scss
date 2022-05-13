@@ -44,6 +44,7 @@ a:not([class]):hover {
 ul.list-dir-contents {
     list-style: none; 
     padding-left: 0;
+    margin-left: 0;
 }
 
 .username {
@@ -51,3 +52,7 @@ ul.list-dir-contents {
 }
 // .nav-breadcrumbs {
 // }
+
+.hide {
+    display: none;
+}
