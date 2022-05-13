@@ -1,15 +1,11 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 show_excerpts: false
 ---
 
 ## Welcome
-Welcome to the DSN.
-- [Sign up to join our mailing list](https://airtable.com/shrltywvcMrfvKbpN)
-- We're building a [Library]({{ site.baseurl }}/library), starting with a collection of [job descriptions]({{ site.baseurl }}/library/job-descriptions) for digital roles in government from several different governments.
+- [Sign up to join our mailing list](https://airtable.com/shrltywvcMrfvKbpN).
+- We're building a [library]({{ site.baseurl }}/library), starting with a collection of [job descriptions]({{ site.baseurl }}/library/job-descriptions) for digital roles in government from several different governments.
 
 {% assign latest = site.posts.first %}
 ## The latest: [{{ latest.title | escape }}]({{ latest.url | relative_url }})
