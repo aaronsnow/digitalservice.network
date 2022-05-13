@@ -3,42 +3,10 @@
 
   <div class="wrapper">
 
-<!--
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
--->
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        {%- include social.html -%}
-
-<!--
-        <p class="feed-subscribe">
-          <a href="{{ 'feed.xml' | relative_url }}">
-            <svg class="svg-icon orange">
-              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
-          </a>
+    <div class="footer-col-wrapper footer-col">
+       <p>
+          {%- include social.html -%}
         </p>
--->
-
-        <!--
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-        -->
-
-      </div>
-
-      <div class="footer-col footer-col-2-3">
         <p>
           <!-- <small> -->
               The Digital Service Network is a partnership of 
@@ -56,14 +24,6 @@
               {% endif %}
           <!-- </small> -->
         </p>
-  
-        <!-- <p>
-          {{- site.description | escape -}}
-        </p> -->
-      </div>
-
-      <!-- <div class="footer-col footer-col-3">
-      </div> -->
     </div>
 
   </div>

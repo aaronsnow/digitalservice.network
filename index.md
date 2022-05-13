@@ -13,12 +13,12 @@ Paragraph(s) here about why this exists, what we're here to do, who we are.
 [Sign up to join our listserv / network](https://airtable.com/shrltywvcMrfvKbpN)
 
 ## Library
-We're building a [Library](/library). We have job descriptions.
+We're building a [Library]({{ site.baseurl }}/library). We have job descriptions.
 
 {% assign latest = site.posts.first %}
 ## The latest: [{{ latest.title | escape }}]({{ latest.url | relative_url }})
 
-_(Click [here](/updates) to see all our updates.)_
+_(Click [here]({{ site.baseurl }}/updates) to see all our updates.)_
 
 {% unless page.show_excerpts == false %}
 {{ latest.excerpt }} ... [\[continue reading\]]({{latest.url | relative_url }})
