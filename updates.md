@@ -19,8 +19,9 @@ hide_nav: true
         </h3>
         {%- if site.show_excerpts and show_excerpts != false -%}
           {{ post.excerpt }} 
-
-          <br/><p>... <a href="{{post.url | relative_url }}"> [continue reading] </a></p>
+          {%- if latest.content.size > latest.excerpt.size -%}
+            <br/><p>... <a href="{{post.url | relative_url }}"> [continue reading] </a></p>
+          {%- endif -%}
         {%- endif -%}
       </li>
       {%- endfor -%}

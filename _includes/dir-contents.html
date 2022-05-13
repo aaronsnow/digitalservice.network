@@ -1,10 +1,7 @@
 <ul class="list-dir-contents">
 {% assign folder = page.url | remove_first: "/" %}
 {% assign folder_depth = page.url | split: "/" | size %}
-
-<!-- DEBUG: folder = {{ folder }} -->
-<!-- DEBUG: folder_depth = {{ folder_depth }} -->
-
+<!-- DEBUG: folder = {{ folder }}, folder_depth = {{ folder_depth }} -->
 {% for child in site.pages reversed %}
 <!-- DEBUG: child.path = {{ child.path }} -->
     {% if child.path contains folder or child.path == folder %}
@@ -16,16 +13,13 @@
                 {% assign child_title_size = child.title | size %}
                 {% if child_title_size > 0 %}
                     {% assign display_title = child.title %}
-<!--
- debug: child.title = |{{ child.title }}|
- debug: display_title = |{{ display_title }}|
--->
+<!-- DEBUG: child.title = |{{ child.title }}|, display_title = |{{ display_title }}| -->
                 {% else %}
                     {% assign display_title = slugname | remove: ".md" | replace: "-", " " %}
                     {% if display_title == "" %}
                         {% assign display_title = "(page title unknown)" %}
                     {% endif %}
-<!-- debug: page path = {{ page.path }}, child path = {{ child.path }}, display_title alt = |{{ display_title }}| -->
+<!-- DEBUG: page path = {{ page.path }}, child path = {{ child.path }}, display_title alt = |{{ display_title }}| -->
                 {% endif %}
                 {% assign url_size = child.url | size %}
                 {% assign sluglink = slugname | remove: ".md" %}
@@ -34,16 +28,15 @@
                 {% else %}
                     {% assign link_url = "./" | append: slugname %}
                 {% endif %}
-<!-- file: slugname = {{ slugname }} -->
+<!-- DEBUG: file slugname = {{ slugname }} -->
 <li><a href="{{ sluglink }}">{{ display_title }}</a></li>
             {% else %}
                 <!-- Subdir: child.path = {{ child.path }} -->
             {% endif %}
         {% else %}
-<!-- DEBUG: child_depth = {{ child_depth }} -->         
             {% assign child_url = child.path | remove: "index.md" %}
             {% assign child_folder = child.url | split: "/" | last %}
-<!-- DEBUG: child_url = {{ child_url }}, child_folder = {{ child_folder }}, child.name = {{ child.name }} -->         
+<!-- DEBUG: child_depth = {{ child_depth }}, child_url = {{ child_url }}, child_folder = {{ child_folder }}, child.name = {{ child.name }} -->         
             {% assign subfolder_depth = folder_depth | plus: 1 %}
             {% if child_depth == subfolder_depth %}
                 {% if page.show_subfolders == true %}
@@ -59,7 +52,7 @@
         {% unless static_child.extname == '.md' %}
             {% assign child_depth = static_child.path | remove_first: "/" | split: "/" | size %}
 <!--
- DEBUG: child_depth = {{ child_depth }}, folder_depth = {{ folder_depth }}
+ DEBUG: static child_depth = {{ child_depth }}, folder_depth = {{ folder_depth }}
  DEBUG: current page path = {{ page.path }}, URL = {{ page.url }}
  DEBUG: static file path = {{ static_child.path }}, filename = {{ static_child.name }}
 -->

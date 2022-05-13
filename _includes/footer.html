@@ -1,32 +1,24 @@
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
   <div class="wrapper">
-
-    <div class="footer-col-wrapper footer-col">
+    <div class="footer-col-wrapper footer-col"><!-- not using columns anymore, but .footer-col pads the space as desired -->
        <p>
           {%- include social.html -%}
         </p>
         <p>
-          <!-- <small> -->
               The Digital Service Network is a partnership of 
               <a href="https://beeckcenter.georgetown.edu/">the Beeck Center for Social Impact and Innovation at Georgetown University</a>
               and <a href="https://usdigitalresponse.org">United States Digital Response</a>.
               We are generously supported by <a href="https://www.ballmergroup.org/">the Ballmer Group</a>.
-          <!-- </small> -->
         </p>
         <p>
-          <!-- <small> -->
               All contents published under a 
               <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0 license</a>. 
               {% if site.repo %}
               Your contributions are welcome <a href="{{ site.repo }}">via our GitHub repo</a>.
               {% endif %}
-          <!-- </small> -->
         </p>
     </div>
-
   </div>
-
 </footer>
 <script data-goatcounter="https://aaronsnow-net.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
