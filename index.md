@@ -5,7 +5,7 @@ latest_count: 2
 ---
 
 ## Welcome
-- [Sign up to join our mailing list](https://airtable.com/shrltywvcMrfvKbpN).
+- [Sign up to join our mailing list]({{ site.baseurl }}/join).
 - We're building a [library]({{ site.baseurl }}/library), starting with a collection of [job descriptions]({{ site.baseurl }}/library/job-descriptions) for digital roles in government from several different governments.
 
 ## Recent Updates
