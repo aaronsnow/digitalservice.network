@@ -28,7 +28,7 @@ a {
     color: #041e42;
 }
 
-a:hover {
+a:hover, a.site-title:hover, a.page-link:hover {
     color: #da291c;
 }
 
@@ -55,4 +55,29 @@ ul.list-dir-contents {
 
 .hide {
     display: none;
+}
+
+.site-title {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+blockquote { // unset some odd choices in _base.scss
+    color: darkslategray;
+    font-size: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    border-left-width: 8px;
+}
+
+.home-recent-updates-wrapper {
+    padding-bottom: 6px;
+}
+
+.home-recent-updates {
+    margin-bottom: 15px;
+    h3, p {
+        padding-bottom: 6px;
+        margin-bottom: 0;
+    }
 }

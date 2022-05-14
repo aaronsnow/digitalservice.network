@@ -1,20 +1,29 @@
 ---
 layout: home
-show_excerpts: false
+show_excerpts: true
+latest_count: 2
 ---
 
 ## Welcome
 - [Sign up to join our mailing list](https://airtable.com/shrltywvcMrfvKbpN).
 - We're building a [library]({{ site.baseurl }}/library), starting with a collection of [job descriptions]({{ site.baseurl }}/library/job-descriptions) for digital roles in government from several different governments.
 
-{% assign latest = site.posts.first %}
-## The latest: [{{ latest.title | escape }}]({{ latest.url | relative_url }})
+## Recent Updates
 
-_(Click [here]({{ site.baseurl }}/updates) to see all our updates.)_
+<div class="home-recent-updates-wrapper">
+{% for latest in site.posts limit:page.latest_count %}
 
-{% unless page.show_excerpts == false %}
+<div class="home-recent-updates">
+<h3><a href="{{ latest.url | relative_url }}">{{ latest.title | escape }}</a></h3>
+    {% unless page.show_excerpts == false %}
 {{ latest.excerpt }}
-{% if latest.content.size > latest.excerpt.size %}... [\[continue reading\]]({{latest.url | relative_url }}){% endif %}
-{% else %}
+        {% if latest.content.size > latest.excerpt.size %} 
+<a href="{{latest.url | relative_url }}">[continue reading "{{ latest.title | truncatewords: 4 }}"]</a>
+        {% endif %}
+    {% else %}
 {{ latest.content }}
-{% endunless %}
+    {% endunless %}
+</div><!-- home-recent-updates -->
+{% endfor %}
+</div><!-- home-recent-updates-wrapper -->
+### [⇨ All updates]({{ site.baseurl }}/updates)
