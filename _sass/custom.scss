@@ -59,7 +59,11 @@ ul.list-dir-contents {
 
 .site-title {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
+    font-family: 'Roboto Mono', monospace
+}
+.site-title span {
+    font-size: 10px;
 }
 
 blockquote { // unset some odd choices in _base.scss
