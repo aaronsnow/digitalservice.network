@@ -7,6 +7,8 @@ show_subfolders: true
 
 We've collected digital service-related job descriptions from these jurisdictions.
 
+Do you know of other JDs that should be included here? Please email us: hi at digitalservice dot network.
+
 {% include dir-contents.html %}
 
 <!-- - [18F](./18f/)

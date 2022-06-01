@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Civic tech Fail Fest this Tuesday, 5/17"
+title:  "Civic tech Fail Fest Tuesday, 5/17"
 date:   "2022-05-13 00:00:00"
 categories: general
 ---
