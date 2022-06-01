@@ -66,12 +66,32 @@ ul.list-dir-contents {
     font-size: 10px;
 }
 
+span.site-caption {
+    @include relative-font-size(0.8);
+    color: $grey-color;  
+    line-height: 3em;
+    margin-top: -2em;
+    letter-spacing: normal;
+    display: none;
+}
+
 blockquote { // unset some odd choices in _base.scss
     color: darkslategray;
     font-size: inherit;
     font-style: inherit;
     letter-spacing: inherit;
     border-left-width: 8px;
+}
+
+.home blockquote {
+    @include relative-font-size(0.9375);
+    margin-bottom: 1em;
+    padding-left: 0;
+    border-left: none;
+}
+
+.home h1, .home h2 {
+    margin-top: 1em;
 }
 
 .home-recent-updates-wrapper {
