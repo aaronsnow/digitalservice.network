@@ -8,6 +8,8 @@
 	+ use the logo
 */
 
+$brand-color:  #6eaddc !default;
+
 body {
     font-family: Montserrat, "Open Sans", sans-serif;
 }
@@ -20,15 +22,19 @@ body, a, .site-title, h1, h2, h3, h4, h5, h6 {
     color: #041e42;
 }
 
-a {
+a, .site-nav .page-link {
     color: #6eaddc;
+}
+
+a:visited, .site-nav .page-link:visited {
+    color: darken($brand-color, 15%);
 }
 
 .icon, .main-content .anchor-heading svg, .nav-list .nav-list-item .nav-list-expander {
     color: #041e42;
 }
 
-a:hover, a.site-title:hover, a.page-link:hover {
+a:hover, a.site-title:hover, a.page-link:hover, .site-nav .page-link:hover {
     color: #da291c;
 }
 
