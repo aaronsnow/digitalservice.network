@@ -1,5 +1,5 @@
 ---
-title: About DSN
+title: About
 permalink: /about/
 layout: page
 hide_nav: true
