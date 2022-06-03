@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Digital Service Network"
+title: "ds.n"
 
 email: hi@digitalservice.network
 
 description: >- # this means to ignore newlines until "baseurl:"
-  The Digital Service Network is a partnership of the Beeck Center for Social Impact and Innovation at Georgetown University and United States Digital Response. 
+  The Digital Service Network
 
 show_excerpts: true
 excerpt_separator: <!--more-->
@@ -65,6 +65,7 @@ exclude:
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
+  - Gemfile
   - Gemfile.lock
   - node_modules/
   - vendor/bundle/
@@ -73,7 +74,6 @@ exclude:
   - vendor/ruby/
   - tmp/
   - .tmp/
-# - Gemfile
   
 # Defaults
 defaults:
