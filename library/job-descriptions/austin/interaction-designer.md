@@ -2,7 +2,7 @@
 
 # Interaction Designer, Mid-level to Senior
 
-### What you’ll do:
+## What you’ll do:
 -   Lead projects from a UX perspective, guiding the strategic vision while defining functionality, navigation, and interaction models    
 -   Create artifacts to communicate with team members, stakeholders, and the public, including wireframes, prototypes, user journeys, sitemaps, personas, and functional specifications    
 -   Guide and coach team members and stakeholders on design methods, especially colleagues who are taking on new tasks and roles within interaction design and user research    
@@ -13,7 +13,7 @@
 -   Share what we make and how we make it through meetups, blog posts, and other functions    
 -   Serve as a subject matter expert in the hiring process for additional Design, Technology, and Innovation Fellows
     
-### What we’re looking for
+## What we’re looking for
 -   3+ years of professional experience designing large-scale interfaces, experiences, and applications    
 -   Experience in delivery of interaction design documentation, such as wireframes, site maps, user flows, clickable prototypes, and/or visual design comps    
 -   Knowledge of lean and agile design methodologies, including expertise in determining when and how to use specific approaches, deliverables, and facilitation methods    
@@ -23,6 +23,6 @@
 -   A passion for public service and a commitment to doing the hard work that’s necessary to improve our city services    
 -   Level of seniority will be based on range of work and level of responsibility in experience
     
-### Minimum qualifications
+## Minimum qualifications
 -   Two years of relevant work experience    
 -   Graduation from an accredited four-year college or university with major course work in a related field. An additional 4 years of experience can substitute this education requirement.
