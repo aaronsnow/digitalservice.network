@@ -10,13 +10,3 @@ We've collected digital service-related job descriptions from these jurisdiction
 Do you know of other JDs that should be included here? [Let us know](mailto:hi@digitalservice.network?Subject=digital service job descriptions).
 
 {% include dir-contents.html %}
-
-<!-- - [18F](./18f/)
-- [City of Austin](./austin/)
-- [California](./california/)
-- [Canadian Digital Service](./canada/)
-- [Colorado (TBA)](./colorado/)
-- [New Jersey](./new-jersey/)
-- [New York City](./new-york-city/)
-- [Ontario](./ontario/)
-- [Royal Borough of Greenwich](./rb-greenwich/) -->
